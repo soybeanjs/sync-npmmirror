@@ -1,5 +1,5 @@
 {
-  "name": "sync-npmmirror",
+  "name": "syncmirror",
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@8.12.0",
@@ -9,19 +9,19 @@
     "url": "https://github.com/soybeanjs"
   },
   "license": "MIT",
-  "homepage": "https://github.com/soybeanjs/sync-npmmirror",
+  "homepage": "https://github.com/soybeanjs/syncmirror",
   "repository": {
-    "url": "https://github.com/soybeanjs/sync-npmmirror.git"
+    "url": "https://github.com/soybeanjs/syncmirror.git"
   },
   "bugs": {
-    "url": "https://github.com/soybeanjs/sync-npmmirror/issues"
+    "url": "https://github.com/soybeanjs/syncmirror/issues"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
   "sideEffects": false,
   "bin": {
-    "sync-npmmirror": "./dist/cli.mjs"
+    "syncmirror": "./dist/cli.mjs"
   },
   "exports": {
     ".": {

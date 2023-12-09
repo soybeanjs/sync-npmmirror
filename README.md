@@ -1,4 +1,4 @@
-# sync-npmmirror
+# syncmirror
 
 ## Usage
 
@@ -7,18 +7,18 @@
 #### sync single package
 
 ```bash
-npx sync-npmmirror -s @soybeanjs/cli
+npx syncmirror -s @soybeanjs/cli
 ```
 #### sync multi packages
 
 ```bash
-npx sync-npmmirror -s @soybeanjs/cli,@soybeanjs/eslint-config
+npx syncmirror -s @soybeanjs/cli,@soybeanjs/eslint-config
 ```
 
 ### use api
 
 ```ts
-import { sync } from 'sync-npmmirror'
+import { sync } from 'syncmirror'
 
 // 1. sync single package
 // if not provide the name, it will use the package.json name
@@ -40,5 +40,5 @@ sync('@soybeanjs/cli', {
 ### help
 
 ```bash
-npx sync-npmmirror -h
+npx syncmirror -h
 ```

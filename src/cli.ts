@@ -3,11 +3,11 @@ import process from 'node:process';
 import cac from 'cac';
 import { consola } from 'consola';
 import { dim, red } from 'kolorist';
-import { version } from '../package.json';
+import { name, version } from '../package.json';
 import { sync } from '.';
 
 function setupCli() {
-  const cli = cac('sync-npmmirror');
+  const cli = cac(name);
 
   cli
     .version(version)
