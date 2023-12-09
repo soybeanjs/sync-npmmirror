@@ -1,0 +1,71 @@
+{
+  "name": "sync-npmmirror",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@8.12.0",
+  "author": {
+    "name": "Soybean",
+    "email": "soybeanjs@outlook.com",
+    "url": "https://github.com/soybeanjs"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/soybeanjs/sync-npmmirror",
+  "repository": {
+    "url": "https://github.com/soybeanjs/sync-npmmirror.git"
+  },
+  "bugs": {
+    "url": "https://github.com/soybeanjs/sync-npmmirror/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "sideEffects": false,
+  "bin": {
+    "sync-npmmirror": "./dist/cli.mjs"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "unbuild",
+    "cleanup": "soy cleanup",
+    "commit": "soy git-commit",
+    "lint": "eslint . --fix",
+    "prepare": "simple-git-hooks",
+    "publish-pkg": "pnpm publish --access public",
+    "release": "soy release",
+    "typecheck": "tsc --noEmit --skipLibCheck",
+    "update-pkg": "soy ncu"
+  },
+  "dependencies": {
+    "consola": "3.2.3",
+    "ofetch": "1.3.3"
+  },
+  "devDependencies": {
+    "@soybeanjs/cli": "0.8.8",
+    "@soybeanjs/eslint-config": "1.0.9",
+    "@types/cli-progress": "3.11.5",
+    "@types/node": "20.10.4",
+    "eslint": "8.55.0",
+    "lint-staged": "15.2.0",
+    "simple-git-hooks": "2.9.0",
+    "tsx": "4.6.2",
+    "typescript": "5.3.3",
+    "unbuild": "2.0.0"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "pnpm soy git-commit-verify",
+    "pre-commit": "pnpm typecheck && pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
