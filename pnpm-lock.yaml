@@ -14,11 +14,11 @@ dependencies:
 
 devDependencies:
   '@soybeanjs/cli':
-    specifier: 0.8.8
-    version: 0.8.8
+    specifier: 1.0.0-beta.4
+    version: 1.0.0-beta.4(eslint@8.55.0)(typescript@5.3.3)
   '@soybeanjs/eslint-config':
-    specifier: 1.0.9
-    version: 1.0.9(eslint@8.55.0)(typescript@5.3.3)
+    specifier: 1.0.12
+    version: 1.0.12(eslint@8.55.0)(typescript@5.3.3)
   '@types/cli-progress':
     specifier: 3.11.5
     version: 3.11.5
@@ -260,33 +260,6 @@ packages:
       '@babel/helper-string-parser': 7.23.4
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
-    dev: true
-
-  /@chevrotain/cst-dts-gen@11.0.3:
-    resolution: {integrity: sha512-BvIKpRLeS/8UbfxXxgC33xOumsacaeCKAjAeLyOn7Pcp95HiRbrpl14S+9vaZLolnbssPIUuiUd8IvgkRyt6NQ==}
-    dependencies:
-      '@chevrotain/gast': 11.0.3
-      '@chevrotain/types': 11.0.3
-      lodash-es: 4.17.21
-    dev: true
-
-  /@chevrotain/gast@11.0.3:
-    resolution: {integrity: sha512-+qNfcoNk70PyS/uxmj3li5NiECO+2YKZZQMbmjTqRI3Qchu8Hig/Q9vgkHpI3alNjr7M+a2St5pw5w5F6NL5/Q==}
-    dependencies:
-      '@chevrotain/types': 11.0.3
-      lodash-es: 4.17.21
-    dev: true
-
-  /@chevrotain/regexp-to-ast@11.0.3:
-    resolution: {integrity: sha512-1fMHaBZxLFvWI067AVbGJav1eRY7N8DDvYCTwGBiE/ytKBgP8azTdgyrKyWZ9Mfh09eHWb5PgTSO8wi7U824RA==}
-    dev: true
-
-  /@chevrotain/types@11.0.3:
-    resolution: {integrity: sha512-gsiM3G8b58kZC2HaWR50gu6Y1440cHiJ+i3JUvcp/35JchYejb2+5MVeJK0iKThYpAa/P2PYFV4hoi44HD+aHQ==}
-    dev: true
-
-  /@chevrotain/utils@11.0.3:
-    resolution: {integrity: sha512-YslZMgtJUyuMbZ+aKvfF3x1f5liK4mWNxghFRv7jqRR9C3R3fAOGTTKvxXDa2Y1s9zSbcpuO0cAxDYsc9SrXoQ==}
     dev: true
 
   /@colors/colors@1.5.0:
@@ -1070,22 +1043,34 @@ packages:
     engines: {node: '>=14.16'}
     dev: true
 
-  /@soybeanjs/changelog@0.3.4:
-    resolution: {integrity: sha512-PfiGG6E8CirB+Z/VOHYiTMZ1iBoooTSwlAYRMUn/REuy6IVTikQRstCy9O7FnMvvgJvHgsvZ4XC9fwq5JrVdwg==}
+  /@soybeanjs/changelog@0.3.8(eslint@8.55.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-1zGtt7rtqIDWRgmrv9ygiTPlptMFLc2ihyj2eQbZpDvZUtp2Ur+gi8l0YCoW/ZF3GglRQUwkIEDfpp6lq5wq/g==}
     dependencies:
+      '@soybeanjs/eslint-config': 1.0.12(eslint@8.55.0)(typescript@5.3.3)
       cli-progress: 3.12.0
       convert-gitmoji: 0.1.3
-      dayjs: 1.11.9
+      dayjs: 1.11.10
       execa: 8.0.1
-      ofetch: 1.2.1
+      ofetch: 1.3.3
+    transitivePeerDependencies:
+      - '@toml-tools/parser'
+      - '@types/eslint'
+      - eslint
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
+      - eslint-plugin-vue
+      - prettier-plugin-toml
+      - supports-color
+      - typescript
+      - vue-eslint-parser
     dev: true
 
-  /@soybeanjs/cli@0.8.8:
-    resolution: {integrity: sha512-heJFjQVqWE/fljuupXjnPI+tcLQTJW7g7HDrj19OO11xcOwWV2bTR4dGnuss8MDJUCH8oJUrJUMSrkTqSEvZwg==}
+  /@soybeanjs/cli@1.0.0-beta.4(eslint@8.55.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-DrctxYolfHHgM5gThn2lrhgD90xTB23TLP7UiEgcpbJ/8l14UJvKoELzLRlHEpni+Vqo2ANCrzoqvkRHxTcdYA==}
     hasBin: true
     dependencies:
-      '@soybeanjs/changelog': 0.3.4
-      bumpp: 9.2.0
+      '@soybeanjs/changelog': 0.3.8(eslint@8.55.0)(typescript@5.3.3)
+      bumpp: 9.2.1
       c12: 1.5.1
       cac: 6.7.14
       consola: 3.2.3
@@ -1097,19 +1082,31 @@ packages:
       npm-check-updates: 16.14.11
       rimraf: 5.0.5
     transitivePeerDependencies:
+      - '@toml-tools/parser'
+      - '@types/eslint'
       - bluebird
+      - eslint
+      - eslint-import-resolver-typescript
+      - eslint-import-resolver-webpack
+      - eslint-plugin-vue
+      - prettier-plugin-toml
       - supports-color
+      - typescript
+      - vue-eslint-parser
     dev: true
 
-  /@soybeanjs/eslint-config@1.0.9(eslint@8.55.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-gk2dVxLNe6THTbGdcyS8T30EkYPX44fSAkQXhgQZo8R+01GPyvdfILNQjmxNe5mbNUAqc0rdEHcKiA6hEYLrOg==}
+  /@soybeanjs/eslint-config@1.0.12(eslint@8.55.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-SIHg/cnmK2ZFIpMFUesfGTPei2q0kGbYS/0wG2tQNpZr4DogH/D9mkeelnbyfThpmmkM/GJkoEoJUoRru8J3DQ==}
     peerDependencies:
+      '@toml-tools/parser': '*'
       eslint: '>=8.40.0'
-      eslint-plugin-vue: '*'
-      prettier-plugin-toml: '*'
+      eslint-plugin-vue: '>=9.19.0'
+      prettier-plugin-toml: '>=2.0.0'
       typescript: '>=5.0.0'
-      vue-eslint-parser: '*'
+      vue-eslint-parser: '>=9.3.2'
     peerDependenciesMeta:
+      '@toml-tools/parser':
+        optional: true
       eslint-plugin-vue:
         optional: true
       prettier-plugin-toml:
@@ -1120,7 +1117,6 @@ packages:
       '@antfu/install-pkg': 0.3.1
       '@eslint/eslintrc': 2.1.4
       '@eslint/js': 8.55.0
-      '@toml-tools/parser': 1.0.0
       '@typescript-eslint/eslint-plugin': 6.13.2(@typescript-eslint/parser@6.13.2)(eslint@8.55.0)(typescript@5.3.3)
       '@typescript-eslint/parser': 6.13.2(eslint@8.55.0)(typescript@5.3.3)
       eslint: 8.55.0
@@ -1135,7 +1131,7 @@ packages:
       local-pkg: 0.5.0
       prettier: 3.1.0
       prettier-plugin-jsdoc: 1.1.1(prettier@3.1.0)
-      prettier-plugin-json-sort: 0.0.1(prettier@3.1.0)
+      prettier-plugin-json-sort: 0.0.2(prettier@3.1.0)
       prompts: 2.4.2
       typescript: 5.3.3
     transitivePeerDependencies:
@@ -1150,19 +1146,6 @@ packages:
     engines: {node: '>=14.16'}
     dependencies:
       defer-to-connect: 2.0.1
-    dev: true
-
-  /@toml-tools/lexer@1.0.0:
-    resolution: {integrity: sha512-rVoOC9FibF2CICwCBWQnYcjAEOmLCJExer178K2AsY0Nk9FjJNVoVJuR5UAtuq42BZOajvH+ainf6Gj2GpCnXQ==}
-    dependencies:
-      chevrotain: 11.0.3
-    dev: true
-
-  /@toml-tools/parser@1.0.0:
-    resolution: {integrity: sha512-j8cd3A3ccLHppGoWI69urbiVJslrpwI6sZ61ySDUPxM/FTkQWRx/JkkF8aipnl0Ds0feWXyjyvmWzn70mIohYg==}
-    dependencies:
-      '@toml-tools/lexer': 1.0.0
-      chevrotain: 11.0.3
     dev: true
 
   /@tootallnate/once@2.0.0:
@@ -1621,8 +1604,8 @@ packages:
       semver: 7.5.4
     dev: true
 
-  /bumpp@9.2.0:
-    resolution: {integrity: sha512-pgp7y3jp33QTaXFVDrE0IKuZF5Y8EsIz+ywZXFALW2nD+ZD+4crxJe/GypBQBoJuZrr5dc6TGrR3wl7fk3+C6w==}
+  /bumpp@9.2.1:
+    resolution: {integrity: sha512-mq6/e8+bnIsOMy1VceTLC49WucMIZqd2nYn0e7Et5LhTO3yYQ8OWJsTl/B+uJDs5eywZmJ4Yt1WTEd2HCI35pw==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
@@ -1780,17 +1763,6 @@ packages:
 
   /character-entities@2.0.2:
     resolution: {integrity: sha512-shx7oQ0Awen/BRIdkjkvz54PnEEI/EjwXDSIZp86/KKdbafHh1Df/RYGBhn4hbe2+uKC9FnT5UCEdyPz3ai9hQ==}
-    dev: true
-
-  /chevrotain@11.0.3:
-    resolution: {integrity: sha512-ci2iJH6LeIkvP9eJW6gpueU8cnZhv85ELY8w8WiFtNjMHA5ad6pQLaJo9mEly/9qUyCpvqX8/POVUTf18/HFdw==}
-    dependencies:
-      '@chevrotain/cst-dts-gen': 11.0.3
-      '@chevrotain/gast': 11.0.3
-      '@chevrotain/regexp-to-ast': 11.0.3
-      '@chevrotain/types': 11.0.3
-      '@chevrotain/utils': 11.0.3
-      lodash-es: 4.17.21
     dev: true
 
   /chokidar@3.5.3:
@@ -2101,8 +2073,8 @@ packages:
       css-tree: 2.2.1
     dev: true
 
-  /dayjs@1.11.9:
-    resolution: {integrity: sha512-QvzAURSbQ0pKdIye2txOzNaHmxtUBXerpY0FJsFXUMKbIZeFm5ht1LS/jFsrncjnmtv8HsG0W2g6c0zUjZWmpA==}
+  /dayjs@1.11.10:
+    resolution: {integrity: sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==}
     dev: true
 
   /debug@3.2.7:
@@ -3585,10 +3557,6 @@ packages:
       p-locate: 5.0.0
     dev: true
 
-  /lodash-es@4.17.21:
-    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
-    dev: true
-
   /lodash.memoize@4.1.2:
     resolution: {integrity: sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag==}
     dev: true
@@ -4329,21 +4297,12 @@ packages:
       boolbase: 1.0.0
     dev: true
 
-  /ofetch@1.2.1:
-    resolution: {integrity: sha512-WEX1TEfGuAFJhzRW6Qv9RcxCyek+YogEeXlCWl1XoqBSW2fc6jU4LTk3VotwC1YfXv8Uz06LSofU6uW/ZIT+6g==}
-    dependencies:
-      destr: 2.0.2
-      node-fetch-native: 1.4.1
-      ufo: 1.3.2
-    dev: true
-
   /ofetch@1.3.3:
     resolution: {integrity: sha512-s1ZCMmQWXy4b5K/TW9i/DtiN8Ku+xCiHcjQ6/J/nDdssirrQNOoB165Zu8EqLMA2lln1JUth9a0aW9Ap2ctrUg==}
     dependencies:
       destr: 2.0.2
       node-fetch-native: 1.4.1
       ufo: 1.3.2
-    dev: false
 
   /ohash@1.1.3:
     resolution: {integrity: sha512-zuHHiGTYTA1sYJ/wZN+t5HKZaH23i4yI1HMwbuXm24Nid7Dv0KcuRlKoNKS9UNfAVSBlnGLcuQrnOKWOZoEGaw==}
@@ -4909,8 +4868,8 @@ packages:
       - supports-color
     dev: true
 
-  /prettier-plugin-json-sort@0.0.1(prettier@3.1.0):
-    resolution: {integrity: sha512-C1DiVtEp5BMT5J5By027cyShl9FxM0pb95HiL5fuPc4C8cWsi81yMJnixTgxmzwDrSWi/Srb0o0YAqw7vkQVGQ==}
+  /prettier-plugin-json-sort@0.0.2(prettier@3.1.0):
+    resolution: {integrity: sha512-xd5VVfneeUBdWhTm5uh0rAto3qnkkosbte6poO5WVTZEAiQdndMQMRPv1SROXx968zfyAlS+Z+C6rkr4jbVOgg==}
     peerDependencies:
       prettier: '>=2.0.0'
     dependencies:

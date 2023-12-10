@@ -11,7 +11,7 @@ function setupCli() {
 
   cli
     .version(version)
-    .option('-s, --syncName [name]', 'Package name, id has multiple packages, you can use "," to separate them.')
+    .option('-s, --syncName [name]', 'Package name, you can use "," to separate multiple packages.')
     .option('-l, --log', 'Show log of sync npmmirror')
     .option('-t, --timeout [timeout]', 'Timeout of sync npmmirror', { default: 1000 * 60 })
     .help();
