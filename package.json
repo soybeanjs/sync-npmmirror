@@ -1,7 +1,7 @@
 {
   "name": "syncmirror",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "packageManager": "pnpm@9.1.4",
   "author": {
     "name": "Soybean",

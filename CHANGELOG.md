@@ -1,6 +1,16 @@
 # Changelog
 
 
+## [v0.0.3](https://github.com/soybeanjs/syncmirror/compare/v0.0.2...v0.0.3) (2024-06-05)
+
+### &nbsp;&nbsp;&nbsp;💅 Refactors
+
+- **projects**: use tsup &nbsp;-&nbsp; by @soybeanjs [<samp>(4d757)</samp>](https://github.com/soybeanjs/syncmirror/commit/4d75777)
+
+### &nbsp;&nbsp;&nbsp;❤️ Contributors
+
+[![soybeanjs](https://github.com/soybeanjs.png?size=48)](https://github.com/soybeanjs)&nbsp;&nbsp;
+
 ## [v0.0.2](https://github.com/soybeanjs/sync-npmmirror/compare/v0.0.1...v0.0.2) (23-12-11)
 
 ### &nbsp;&nbsp;&nbsp;🏡 Chore
