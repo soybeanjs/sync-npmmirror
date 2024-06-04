@@ -2,7 +2,7 @@
   "name": "syncmirror",
   "type": "module",
   "version": "0.0.2",
-  "packageManager": "pnpm@8.12.0",
+  "packageManager": "pnpm@9.1.4",
   "author": {
     "name": "Soybean",
     "email": "soybeanjs@outlook.com",
@@ -21,23 +21,24 @@
   },
   "sideEffects": false,
   "bin": {
-    "syncmirror": "./dist/cli.mjs"
+    "syncmirror": "./dist/cli.js"
   },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
+      "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     }
   },
   "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": ["dist"],
   "scripts": {
-    "build": "unbuild",
+    "build": "tsup",
     "cleanup": "soy cleanup",
     "commit": "soy git-commit",
+    "dev": "tsup --watch",
     "lint": "eslint . --fix",
     "prepare": "simple-git-hooks",
     "publish-pkg": "pnpm publish --access public",
@@ -47,19 +48,18 @@
   },
   "dependencies": {
     "consola": "3.2.3",
-    "ofetch": "1.3.3"
+    "ofetch": "1.3.4"
   },
   "devDependencies": {
-    "@soybeanjs/cli": "1.0.0-beta.4",
-    "@soybeanjs/eslint-config": "1.0.12",
-    "@types/cli-progress": "3.11.5",
-    "@types/node": "20.10.4",
-    "eslint": "8.55.0",
-    "lint-staged": "15.2.0",
-    "simple-git-hooks": "2.9.0",
-    "tsx": "4.6.2",
-    "typescript": "5.3.3",
-    "unbuild": "2.0.0"
+    "@soybeanjs/cli": "1.0.15",
+    "@soybeanjs/eslint-config": "1.3.5",
+    "@types/node": "20.13.0",
+    "eslint": "9.4.0",
+    "lint-staged": "15.2.5",
+    "simple-git-hooks": "2.11.1",
+    "tsup": "8.0.2",
+    "tsx": "4.11.0",
+    "typescript": "5.4.5"
   },
   "simple-git-hooks": {
     "commit-msg": "pnpm soy git-commit-verify",
